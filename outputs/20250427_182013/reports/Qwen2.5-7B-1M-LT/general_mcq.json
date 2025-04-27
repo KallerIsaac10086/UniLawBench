@@ -1,0 +1,41 @@
+{
+    "name": "Qwen2.5-7B-1M-LT_general_mcq",
+    "dataset_name": "general_mcq",
+    "model_name": "Qwen2.5-7B-1M-LT",
+    "score": 0.2353,
+    "metrics": [
+        {
+            "name": "AverageAccuracy",
+            "num": 1500,
+            "score": 0.2353,
+            "macro_score": 0.2353,
+            "categories": [
+                {
+                    "name": [
+                        "default"
+                    ],
+                    "num": 1500,
+                    "score": 0.2353,
+                    "macro_score": 0.2353,
+                    "subsets": [
+                        {
+                            "name": "1-2知识问答",
+                            "score": 0.26,
+                            "num": 500
+                        },
+                        {
+                            "name": "2-8论点挖掘",
+                            "score": 0.234,
+                            "num": 500
+                        },
+                        {
+                            "name": "3-6案例分析",
+                            "score": 0.212,
+                            "num": 500
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

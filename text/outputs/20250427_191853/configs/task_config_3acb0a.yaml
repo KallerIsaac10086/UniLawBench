@@ -1,0 +1,78 @@
+api_key: EMPTY
+api_url: null
+chat_template: null
+dataset_args:
+  general_qa:
+    dataset_id: /root/LawBench-eval/text
+    eval_split: test
+    extra_params: {}
+    few_shot_num: 0
+    few_shot_random: false
+    filters: null
+    metric_list:
+    - AverageBLEU
+    - AverageRouge
+    model_adapter: generation
+    name: general_qa
+    output_types:
+    - generation
+    pretty_name: null
+    prompt_template: '请回答问题
+
+      {query}'
+    query_template: null
+    subset_list:
+    - 1-1法条背诵
+    - 2-1文件校对
+    - 2-2纠纷焦点识别
+    - 2-3婚姻纠纷鉴定
+    - 2-4问题主题识别
+    - 2-5阅读理解
+    - 2-6命名实体识别
+    - 2-7舆情摘要
+    - 2-9事件检测
+    - 2-10触发词提取
+    - 3-1法条预测(基于事实)
+    - 3-2法条预测(基于场景)
+    - 3-3罪名预测
+    - 3-4刑期预测(无法条内容)
+    - 3-5刑期预测(给定法条内容)
+    - 3-7犯罪金额计算
+    - 3-8咨询
+    system_prompt: null
+    train_split: null
+dataset_dir: /root/.cache/modelscope/hub/datasets
+dataset_hub: modelscope
+datasets:
+- general_qa
+debug: false
+dry_run: false
+eval_backend: Native
+eval_batch_size: 1
+eval_config: null
+eval_type: checkpoint
+generation_config:
+  do_sample: false
+  max_length: 2048
+  max_new_tokens: 512
+  temperature: 1.0
+  top_k: 50
+  top_p: 1.0
+judge_model_args: {}
+judge_strategy: auto
+judge_worker_num: 1
+limit: null
+mem_cache: false
+model: /root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M
+model_args:
+  precision: torch.float16
+  revision: master
+model_id: Qwen2.5-7B-1M
+outputs: null
+seed: 42
+stage: all
+stream: false
+template_type: null
+timeout: null
+use_cache: null
+work_dir: ./outputs/20250427_191853

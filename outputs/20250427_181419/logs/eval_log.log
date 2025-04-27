@@ -1,0 +1,75 @@
+2025-04-27 18:14:30,475 - evalscope - INFO - Dump task config to ./outputs/20250427_181419/configs/task_config_cfc180.yaml
+2025-04-27 18:14:30,480 - evalscope - INFO - {
+    "model": "/root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M",
+    "model_id": "Qwen2.5-7B-1M",
+    "model_args": {
+        "revision": "master",
+        "precision": "torch.float16"
+    },
+    "template_type": null,
+    "chat_template": null,
+    "datasets": [
+        "general_mcq"
+    ],
+    "dataset_args": {
+        "general_mcq": {
+            "name": "general_mcq",
+            "dataset_id": "/root/LawBench-eval/choose",
+            "model_adapter": "multiple_choice_logits",
+            "output_types": [
+                "multiple_choice_logits",
+                "generation"
+            ],
+            "subset_list": [
+                "1-2知识问答",
+                "2-8论点挖掘",
+                "3-6案例分析"
+            ],
+            "metric_list": [
+                "AverageAccuracy"
+            ],
+            "few_shot_num": 0,
+            "few_shot_random": false,
+            "train_split": "dev",
+            "eval_split": "val",
+            "prompt_template": "请回答问题，并选出其中的正确答案\n{query}",
+            "system_prompt": null,
+            "query_template": "问题：{question}\n{choices}\n答案: {answer}\n\n",
+            "pretty_name": "General MCQ",
+            "filters": null,
+            "extra_params": {}
+        }
+    },
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "generation_config": {
+        "max_length": 2048,
+        "max_new_tokens": 512,
+        "do_sample": false,
+        "top_k": 50,
+        "top_p": 1.0,
+        "temperature": 1.0
+    },
+    "eval_type": "checkpoint",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "stage": "all",
+    "limit": null,
+    "eval_batch_size": 1,
+    "mem_cache": false,
+    "use_cache": null,
+    "work_dir": "./outputs/20250427_181419",
+    "outputs": null,
+    "debug": false,
+    "dry_run": false,
+    "seed": 42,
+    "api_url": null,
+    "api_key": "EMPTY",
+    "timeout": null,
+    "stream": false,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {}
+}
+2025-04-27 18:14:30,481 - evalscope - INFO - **** Start evaluating on dataset /root/LawBench-eval/choose ****
+2025-04-27 18:14:30,481 - evalscope - INFO - Loading dataset from local disk: /root/LawBench-eval/choose
