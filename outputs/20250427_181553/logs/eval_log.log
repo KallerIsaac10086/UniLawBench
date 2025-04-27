@@ -1,0 +1,187 @@
+2025-04-27 18:16:03,443 - evalscope - INFO - Dump task config to ./outputs/20250427_181553/configs/task_config_6bf4a4.yaml
+2025-04-27 18:16:03,448 - evalscope - INFO - {
+    "model": "/root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M",
+    "model_id": "Qwen2.5-7B-1M",
+    "model_args": {
+        "revision": "master",
+        "precision": "torch.float16"
+    },
+    "template_type": null,
+    "chat_template": null,
+    "datasets": [
+        "general_mcq"
+    ],
+    "dataset_args": {
+        "general_mcq": {
+            "name": "general_mcq",
+            "dataset_id": "/root/LawBench-eval/choose",
+            "model_adapter": "multiple_choice_logits",
+            "output_types": [
+                "multiple_choice_logits",
+                "generation"
+            ],
+            "subset_list": [
+                "1-2知识问答",
+                "2-8论点挖掘",
+                "3-6案例分析"
+            ],
+            "metric_list": [
+                "AverageAccuracy"
+            ],
+            "few_shot_num": 0,
+            "few_shot_random": false,
+            "train_split": "dev",
+            "eval_split": "val",
+            "prompt_template": "请回答问题，并选出其中的正确答案\n{query}",
+            "system_prompt": null,
+            "query_template": "问题：{question}\n{choices}\n答案: {answer}\n\n",
+            "pretty_name": "General MCQ",
+            "filters": null,
+            "extra_params": {}
+        }
+    },
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "generation_config": {
+        "max_length": 2048,
+        "max_new_tokens": 512,
+        "do_sample": false,
+        "top_k": 50,
+        "top_p": 1.0,
+        "temperature": 1.0
+    },
+    "eval_type": "checkpoint",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "stage": "all",
+    "limit": null,
+    "eval_batch_size": 1,
+    "mem_cache": false,
+    "use_cache": null,
+    "work_dir": "./outputs/20250427_181553",
+    "outputs": null,
+    "debug": false,
+    "dry_run": false,
+    "seed": 42,
+    "api_url": null,
+    "api_key": "EMPTY",
+    "timeout": null,
+    "stream": false,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {}
+}
+2025-04-27 18:16:03,449 - evalscope - INFO - **** Start evaluating on dataset /root/LawBench-eval/choose ****
+2025-04-27 18:16:03,450 - evalscope - INFO - Loading dataset from local disk: /root/LawBench-eval/choose
+2025-04-27 18:16:03,458 - evalscope - INFO - Use default settings: > few_shot_num: 0, > few_shot_split: dev, > target_eval_split: val
+2025-04-27 18:16:21,308 - evalscope - INFO - Dump predictions to ./outputs/20250427_181553/predictions/Qwen2.5-7B-1M/general_mcq_1-2知识问答.jsonl.
+2025-04-27 18:16:38,890 - evalscope - INFO - Dump predictions to ./outputs/20250427_181553/predictions/Qwen2.5-7B-1M/general_mcq_2-8论点挖掘.jsonl.
+2025-04-27 18:17:00,550 - evalscope - INFO - Dump predictions to ./outputs/20250427_181553/predictions/Qwen2.5-7B-1M/general_mcq_3-6案例分析.jsonl.
+2025-04-27 18:17:00,624 - evalscope - INFO - Dump report: ./outputs/20250427_181553/reports/Qwen2.5-7B-1M/general_mcq.json 
+
+2025-04-27 18:17:00,630 - evalscope - INFO - Report table: 
++---------------+-------------+-----------------+-------------+-------+---------+---------+
+| Model         | Dataset     | Metric          | Subset      |   Num |   Score | Cat.0   |
++===============+=============+=================+=============+=======+=========+=========+
+| Qwen2.5-7B-1M | general_mcq | AverageAccuracy | 1-2知识问答 |   500 |   0.256 | default |
++---------------+-------------+-----------------+-------------+-------+---------+---------+
+| Qwen2.5-7B-1M | general_mcq | AverageAccuracy | 2-8论点挖掘 |   500 |   0.22  | default |
++---------------+-------------+-----------------+-------------+-------+---------+---------+
+| Qwen2.5-7B-1M | general_mcq | AverageAccuracy | 3-6案例分析 |   500 |   0.23  | default |
++---------------+-------------+-----------------+-------------+-------+---------+---------+ 
+
+2025-04-27 18:17:00,631 - evalscope - INFO - **** Evaluation finished on /root/LawBench-eval/choose ****
+
+2025-04-27 18:17:00,904 - evalscope - INFO - Args: Task config is provided with TaskConfig type.
+2025-04-27 18:17:06,450 - evalscope - WARNING - Got local model dir: /root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M
+2025-04-27 18:17:06,452 - evalscope - INFO - Updating generation config ...
+2025-04-27 18:17:06,477 - evalscope - INFO - Dump task config to ./outputs/20250427_181700/configs/task_config_340363.yaml
+2025-04-27 18:17:06,480 - evalscope - INFO - {
+    "model": "/root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M",
+    "model_id": "Qwen2.5-7B-1M",
+    "model_args": {
+        "revision": "master",
+        "precision": "torch.float16"
+    },
+    "template_type": null,
+    "chat_template": null,
+    "datasets": [
+        "general_qa"
+    ],
+    "dataset_args": {
+        "general_qa": {
+            "name": "general_qa",
+            "dataset_id": "/root/LawBench-eval/text",
+            "model_adapter": "generation",
+            "output_types": [
+                "generation"
+            ],
+            "subset_list": [
+                "1-1法条背诵",
+                "2-1文件校对",
+                "2-2纠纷焦点识别",
+                "2-3婚姻纠纷鉴定",
+                "2-4问题主题识别",
+                "2-5阅读理解",
+                "2-6命名实体识别",
+                "2-7舆情摘要",
+                "2-8论点挖掘",
+                "2-9事件检测",
+                "2-10触发词提取",
+                "3-1法条预测(基于事实)",
+                "3-2法条预测(基于场景)",
+                "3-3罪名预测",
+                "3-4刑期预测(无法条内容)",
+                "3-5刑期预测(给定法条内容)",
+                "3-7犯罪金额计算",
+                "3-8咨询"
+            ],
+            "metric_list": [
+                "AverageBLEU",
+                "AverageRouge"
+            ],
+            "few_shot_num": 0,
+            "few_shot_random": false,
+            "train_split": null,
+            "eval_split": "test",
+            "prompt_template": "请回答问题\n{query}",
+            "system_prompt": null,
+            "query_template": null,
+            "pretty_name": null,
+            "filters": null,
+            "extra_params": {}
+        }
+    },
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "generation_config": {
+        "max_length": 2048,
+        "max_new_tokens": 512,
+        "do_sample": false,
+        "top_k": 50,
+        "top_p": 1.0,
+        "temperature": 1.0
+    },
+    "eval_type": "checkpoint",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "stage": "all",
+    "limit": null,
+    "eval_batch_size": 1,
+    "mem_cache": false,
+    "use_cache": null,
+    "work_dir": "./outputs/20250427_181700",
+    "outputs": null,
+    "debug": false,
+    "dry_run": false,
+    "seed": 42,
+    "api_url": null,
+    "api_key": "EMPTY",
+    "timeout": null,
+    "stream": false,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {}
+}
+2025-04-27 18:17:06,481 - evalscope - INFO - **** Start evaluating on dataset /root/LawBench-eval/text ****
+2025-04-27 18:18:36,789 - evalscope - INFO - Args: Task config is provided with TaskConfig type.
