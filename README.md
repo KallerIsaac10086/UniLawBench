@@ -1,8 +1,4 @@
 
-<div align="center">
-  <img width="500" src="https://raw.githubusercontent.com/your-org/UniLawBench/main/figs/UniLawBench_logo.png" alt="UniLawBench" />
-</div>
-
 <h1 align="center">UniLawBench · PyPI 版</h1>
 <p align="center">
   <a href="https://pypi.org/project/unilawbench"><img src="https://img.shields.io/pypi/v/unilawbench?color=brightgreen" alt="PyPI"></a>
