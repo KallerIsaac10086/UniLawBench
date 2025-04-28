@@ -1,1 +1,2 @@
 evalscope[all]
+PyQt5==5.15.9
