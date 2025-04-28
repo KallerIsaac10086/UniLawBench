@@ -1,3 +1,2 @@
-evalscope[all]
 PyQt5
 pytrec_eval_terrier
