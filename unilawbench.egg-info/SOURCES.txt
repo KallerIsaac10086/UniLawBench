@@ -5,6 +5,7 @@ unilawbench.egg-info/PKG-INFO
 unilawbench.egg-info/SOURCES.txt
 unilawbench.egg-info/dependency_links.txt
 unilawbench.egg-info/entry_points.txt
+unilawbench.egg-info/not-zip-safe
 unilawbench.egg-info/requires.txt
 unilawbench.egg-info/top_level.txt
 unilawbench/dataset/mcq/1-2知识问答_val.csv
