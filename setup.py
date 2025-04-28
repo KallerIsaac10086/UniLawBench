@@ -17,7 +17,8 @@ setup(
     },
     install_requires=[
         'evalscope[all]',
-        'PyQt5==5.15.9'
+        'PyQt5',
+        'pytrec_eval_terrier'
     ],
     entry_points={
         'console_scripts': [
