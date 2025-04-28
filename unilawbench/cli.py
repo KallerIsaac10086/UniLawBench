@@ -1,4 +1,5 @@
 import argparse
+import sys
 from pathlib import Path
 from typing import List
 
@@ -7,6 +8,10 @@ import evalscope
 def main():
     parser = argparse.ArgumentParser(description='UniLawBench 法律评估工具')
     subparsers = parser.add_subparsers(dest='command', required=True)
+    
+    # Version command
+    version_parser = subparsers.add_parser('version', help='显示当前版本号')
+    version_parser.set_defaults(func=handle_version)
 
     # GUI命令
     gui_parser = subparsers.add_parser('gui', help='启动图形界面')
@@ -61,6 +66,29 @@ def handle_gui(args):
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
+def handle_eval(args):
+    from .utils.evaluator import run_evaluation
+    try:
+        datasets = resolve_datasets(args)
+        print(f"🚀 开始评估: {args.form} 形式, 共 {len(datasets)} 个数据集")
+        
+        results = run_evaluation(
+            model_path=args.model,
+            dataset_ids=datasets,
+            eval_type=args.form
+        )
+        
+        print("\n✅ 评估完成:")
+        for dataset_id, metrics in results.items():
+            print(f"📊 {dataset_id}: {metrics}")
+    except Exception as e:
+        print(f"❌ 评估失败: {str(e)}")
+        exit(1)
+
+def handle_version(args):
+    from unilawbench import __version__
+    print(f"UniLawBench 版本: {__version__}")
 
 if __name__ == '__main__':
     main()

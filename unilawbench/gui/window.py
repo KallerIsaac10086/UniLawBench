@@ -34,12 +34,31 @@ class MainWindow(QMainWindow):
         convert_tab = QWidget()
         layout = QVBoxLayout()
         
+        # 评估形式选择
+        self.form_combo = QComboBox()
+        self.form_combo.addItems(['qa', 'mcq'])
+        layout.addWidget(QLabel('评估形式:'))
+        layout.addWidget(self.form_combo)
+
+        # 运行所有数据集
+        self.run_all_check = QCheckBox('运行所有数据集')
+        layout.addWidget(self.run_all_check)
+
+        # 数据集ID输入
+        self.dataset_edit = QLineEdit()
+        layout.addWidget(QLabel('数据集ID (空格分隔):'))
+        layout.addWidget(self.dataset_edit)
+
         # 转换类型选择
-        self.convert_btn = QPushButton('选择转换文件')
-        self.convert_btn.clicked.connect(self.select_convert_file)
-        layout.addWidget(self.convert_btn)
-        
-        # TODO: 添加其他转换相关控件
+        self.convert_type = QComboBox()
+        self.convert_type.addItems(['mcq', 'qa', 'focus'])
+        layout.addWidget(QLabel('转换类型:'))
+        layout.addWidget(self.convert_type)
+
+        # 输出路径选择
+        self.output_btn = QPushButton('选择输出路径')
+        self.output_btn.clicked.connect(self.select_output_path)
+        layout.addWidget(self.output_btn)
         
         convert_tab.setLayout(layout)
         self.tabs.addTab(convert_tab, "转换")
