@@ -1,0 +1,18 @@
+{"timestamp": "2025-04-27T18:05:23.529584", "original_name": "1-1.json", "new_name": "1-1法条背诵.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.529879", "original_name": "2-1.json", "new_name": "2-1文件校对.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.529940", "original_name": "2-10.json", "new_name": "2-10触发词提取.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.529991", "original_name": "2-2.json", "new_name": "2-2纠纷焦点识别.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530037", "original_name": "2-3.json", "new_name": "2-3婚姻纠纷鉴定.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530079", "original_name": "2-5.json", "new_name": "2-5阅读理解.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530120", "original_name": "2-6.json", "new_name": "2-6命名实体识别.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530160", "original_name": "2-7.json", "new_name": "2-7舆情摘要.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530198", "original_name": "2-9.json", "new_name": "2-9事件检测.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530238", "original_name": "3-1.json", "new_name": "3-1法条预测(基于事实).json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530282", "original_name": "3-2.json", "new_name": "3-2法条预测(基于场景).json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530321", "original_name": "3-3.json", "new_name": "3-3罪名预测.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530360", "original_name": "3-4.json", "new_name": "3-4刑期预测(无法条内容).json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530399", "original_name": "3-5.json", "new_name": "3-5刑期预测(给定法条内容).json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530439", "original_name": "3-7.json", "new_name": "3-7犯罪金额计算.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530476", "original_name": "3-8.json", "new_name": "3-8咨询.json", "status": "success", "reason": "正常重命名"}
+{"timestamp": "2025-04-27T18:05:23.530515", "original_name": "rename_log_20250427_180523.jsonl", "new_name": null, "status": "skipped", "reason": "文件名格式不匹配（应为 数字-数字.扩展名）"}
+{"timestamp": "2025-04-27T18:05:23.531561", "operation": "summary", "stats": {"total_files": 17, "renamed": 16, "skipped": 1, "errors": 0}, "note": "处理完成，日志已保存到 /root/LawBench-eval/text/rename_log_20250427_180523.jsonl"}

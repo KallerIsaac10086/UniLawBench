@@ -1,0 +1,266 @@
+2025-04-27 19:19:02,569 - evalscope - WARNING - Got local model dir: /root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M
+2025-04-27 19:19:02,569 - evalscope - INFO - Updating generation config ...
+2025-04-27 19:19:02,597 - evalscope - INFO - Dump task config to ./outputs/20250427_191853/configs/task_config_3acb0a.yaml
+2025-04-27 19:19:02,600 - evalscope - INFO - {
+    "model": "/root/autodl-tmp/text-generation-webui-2.7/models/Qwen2.5-7B-1M",
+    "model_id": "Qwen2.5-7B-1M",
+    "model_args": {
+        "revision": "master",
+        "precision": "torch.float16"
+    },
+    "template_type": null,
+    "chat_template": null,
+    "datasets": [
+        "general_qa"
+    ],
+    "dataset_args": {
+        "general_qa": {
+            "name": "general_qa",
+            "dataset_id": "/root/LawBench-eval/text",
+            "model_adapter": "generation",
+            "output_types": [
+                "generation"
+            ],
+            "subset_list": [
+                "1-1法条背诵",
+                "2-1文件校对",
+                "2-2纠纷焦点识别",
+                "2-3婚姻纠纷鉴定",
+                "2-4问题主题识别",
+                "2-5阅读理解",
+                "2-6命名实体识别",
+                "2-7舆情摘要",
+                "2-9事件检测",
+                "2-10触发词提取",
+                "3-1法条预测(基于事实)",
+                "3-2法条预测(基于场景)",
+                "3-3罪名预测",
+                "3-4刑期预测(无法条内容)",
+                "3-5刑期预测(给定法条内容)",
+                "3-7犯罪金额计算",
+                "3-8咨询"
+            ],
+            "metric_list": [
+                "AverageBLEU",
+                "AverageRouge"
+            ],
+            "few_shot_num": 0,
+            "few_shot_random": false,
+            "train_split": null,
+            "eval_split": "test",
+            "prompt_template": "请回答问题\n{query}",
+            "system_prompt": null,
+            "query_template": null,
+            "pretty_name": null,
+            "filters": null,
+            "extra_params": {}
+        }
+    },
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "generation_config": {
+        "max_length": 2048,
+        "max_new_tokens": 512,
+        "do_sample": false,
+        "top_k": 50,
+        "top_p": 1.0,
+        "temperature": 1.0
+    },
+    "eval_type": "checkpoint",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "stage": "all",
+    "limit": null,
+    "eval_batch_size": 1,
+    "mem_cache": false,
+    "use_cache": null,
+    "work_dir": "./outputs/20250427_191853",
+    "outputs": null,
+    "debug": false,
+    "dry_run": false,
+    "seed": 42,
+    "api_url": null,
+    "api_key": "EMPTY",
+    "timeout": null,
+    "stream": false,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {}
+}
+2025-04-27 19:19:02,600 - evalscope - INFO - **** Start evaluating on dataset /root/LawBench-eval/text ****
+2025-04-27 19:19:02,695 - evalscope - INFO - Use default settings: > few_shot_num: 0, > few_shot_split: None, > target_eval_split: test
+2025-04-27 21:36:48,153 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_1-1法条背诵.jsonl.
+2025-04-27 21:36:55,761 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:55,827 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,404 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,441 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,696 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,702 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,743 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,751 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,800 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,816 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-27 21:36:56,903 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:46,274 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_2-1文件校对.jsonl.
+2025-04-27 23:51:54,304 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:54,373 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,059 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,125 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,496 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,504 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,567 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,578 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,653 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,677 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-27 23:51:55,803 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:17,347 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_2-2纠纷焦点识别.jsonl.
+2025-04-28 02:07:24,952 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,002 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,602 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,644 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,916 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,923 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,965 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:25,973 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:26,024 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:26,041 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-28 02:07:26,139 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:48,208 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_2-3婚姻纠纷鉴定.jsonl.
+2025-04-28 04:19:55,239 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:55,289 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:55,906 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:55,950 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,231 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,238 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,284 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,292 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,344 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,362 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-28 04:19:56,450 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:39,484 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_2-4问题主题识别.jsonl.
+2025-04-28 06:30:46,719 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:46,766 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,351 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,396 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,661 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,667 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,711 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,720 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,770 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,789 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-28 06:30:47,878 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:41:55,771 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_2-5阅读理解.jsonl.
+2025-04-28 08:42:03,303 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:03,353 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:03,930 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:03,968 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,209 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,215 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,258 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,265 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,307 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,322 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-28 08:42:04,399 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:43,772 - evalscope - INFO - Dump predictions to ./outputs/20250427_191853/predictions/Qwen2.5-7B-1M/general_qa_2-6命名实体识别.jsonl.
+2025-04-28 10:52:51,049 - evalscope - WARNING - rouge score error: 地点 : 案发现场  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:51,096 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 无 
+ 地点 : 无 
+ 时间 : 无 
+ 组织 机构 : 无 
+ 物品 价值 : 无 
+ 被盗 物品 : 无 
+ 被盗 货币 : 无 
+ 作案工具 : 无 
+ 犯罪 嫌疑人 : 无 
+ 受害人 : 无  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:51,664 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 以上 涉案 财物  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:51,707 - evalscope - WARNING - rouge score error: 被盗 物品 : 车辆 
+ 受害人 : 被害人  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:51,963 - evalscope - WARNING - rouge score error: 被盗 物品 : 部分 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:51,969 - evalscope - WARNING - rouge score error: 被盗 物品 : 手表  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:52,012 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 其 
+ 物品 价值 : 2 斤 白酒  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:52,021 - evalscope - WARNING - rouge score error: 被盗 物品 : 所盗 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:52,070 - evalscope - WARNING - rouge score error: 被盗 物品 : 涉案 赃物  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:52,086 - evalscope - WARNING - rouge score error: 犯罪 嫌疑人 : 二人  not enough values to unpack (expected 2, got 0)
+2025-04-28 10:52:52,176 - evalscope - WARNING - rouge score error: 受害人 : 被害人 
+ 被盗 物品 : 赃物  not enough values to unpack (expected 2, got 0)

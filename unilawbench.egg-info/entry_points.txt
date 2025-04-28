@@ -1,0 +1,2 @@
+[console_scripts]
+unilawbench = unilawbench.cli:main
