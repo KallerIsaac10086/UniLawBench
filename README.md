@@ -1,10 +1,7 @@
-<div align="center">
-  <img width="540" src="./figs/UniLawBench_logo.png" alt="UniLawBench">
-</div>
 
 <h1 align="center">UniLawBench —— 原生兼容 EvalScope 的中文法律大模型评测基准</h1>
 <p align="center">
-  🌐 <a href="https://github.com/KallerIsaac10086/UniLawBench/" target="_blank">GitHub</a> • 📑 <a href="https://arxiv.org/abs/2309.16289" target="_blank">背景论文</a> • ⚖️ <a href="https://github.com/open-compass/LawBench/tree/main/data">任务数据</a> • 🛠️ <a href="https://github.com/modelscope/evalscope" target="_blank">EvalScope</a> • 📦 <a href="https://pypi.org/project/unilawbench">PyPI</a>
+  🌐 <a href="https://github.com/KallerIsaac10086/UniLawBench/" target="_blank">GitHub</a> • 📑 <a href="https://arxiv.org/abs/2309.16289" target="_blank">背景论文</a> • ⚖️ <a href="https://github.com/open-compass/LawBench/tree/main/data">任务数据</a> • 🛠️ <a href="https://github.com/modelscope/evalscope" target="_blank">EvalScope</a> • 📦 <a href="https://pypi.org/project/unilawbench">PyPI</a> • 📦 <a href="https://github.com/KallerIsaac10086/UniLawBench/tree/pypi">Pypi版源代码</a>
 </p>
 <p align="center">
    📖 <a href="README.md">中文</a> | <a href="README_EN.md">English</a>
