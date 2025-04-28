@@ -7,6 +7,10 @@ import evalscope
 def main():
     parser = argparse.ArgumentParser(description='UniLawBench 法律评估工具')
     subparsers = parser.add_subparsers(dest='command', required=True)
+
+    # GUI命令
+    gui_parser = subparsers.add_parser('gui', help='启动图形界面')
+    gui_parser.set_defaults(func=handle_gui)
     
     # 评估命令
     eval_parser = subparsers.add_parser('eval', help='启动评估任务')
@@ -28,6 +32,8 @@ def main():
     convert_parser.set_defaults(func=handle_convert)
 
     args = parser.parse_args()
+    if args.command == 'gui' and len(sys.argv) > 2:
+        parser.error("gui命令不能与其他参数同时使用")
     args.func(args)
 
 def handle_convert(args):
@@ -46,6 +52,15 @@ def resolve_datasets(args) -> List[str]:
         data_dir = Path(__file__).parent / 'dataset' / args.form
         return [f.stem for f in data_dir.glob('*.*') if f.suffix in ('.csv', '.jsonl')]
     return args.set if args.set else []
+
+def handle_gui(args):
+    from .gui.window import MainWindow
+    from PyQt5.QtWidgets import QApplication
+    
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
 
 if __name__ == '__main__':
     main()

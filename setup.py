@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='unilawbench',
-    version='1.2.post1',
+    version='1.3.0',
     packages=find_packages(),
     package_data={
         'unilawbench': [
@@ -14,7 +14,8 @@ setup(
         ]
     },
     install_requires=[
-        'evalscope[all]'
+        'evalscope[all]',
+        'PyQt5==5.15.9'
     ],
     entry_points={
         'console_scripts': [

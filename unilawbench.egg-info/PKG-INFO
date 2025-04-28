@@ -1,4 +1,4 @@
 Metadata-Version: 2.1
 Name: unilawbench
-Version: 1.2.post1
+Version: 1.3.0
 Requires-Dist: evalscope[all]
